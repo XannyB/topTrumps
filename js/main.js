@@ -1,24 +1,28 @@
 //JS will go here.
 //TODO create class
-function cardDamageValue(strength,speed,weight,type){
+function cardDamageValue(creatureName,strength,speed,weight,battleType){
      var obj = {};
  
-       obj.strength=strength;
-       obj.speed=speed;
-       obj.weight=weight;
-       obj.type=type;
+ 		obj.creatureName=creatureName;
+    	obj.strength=strength;
+    	obj.speed=speed;
+    	obj.weight=weight;
+     	obj.battleType=battleType;
  
-      return obj;
+     return obj;
 }
  
 //You could then say... let's play!
  
 function showWinner (){
 
-var cardDamageValue1 = cardDamageValue(10, 5, 4, 'Lizard');
-var cardDamageValue2 = cardDamageValue(5, 4, 10, 'Whale');
+var charmanderCard = cardDamageValue(10, 5, 4, 'Fire');
+var squirtleCard = cardDamageValue(9, 6, 10, 'Water');
 
-if (cardDamageValue1.speed > cardDamageValue2.speed) {
-          console.log('Player 1 wins');
+if (charmanderCard.speed > squirtleCard.speed) {
+    console.log(charmanderCard.creatureName + ' is faster');
+} else {
+	console.log(squirtleCard.creatureName + 'squirtle is faster');
 }
 }
+
